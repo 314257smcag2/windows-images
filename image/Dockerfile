@@ -1,7 +1,9 @@
 FROM ubuntu:22.04
-RUN apt-get update && \
-    apt-get -y upgrade && \
-    apt-get -y install xvfb x11-utils x11vnc qemu wget curl nano
+
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get -y install xvfb x11-utils x11vnc qemu wget curl nano
+
 RUN wget https://raw.githubusercontent.com/kmille36/GoogleDriveCurl/main/gdown
 RUN bash gdown Porteus-CINNAMON.qcow2 1-Easy8BrLr5tQ2r4pe9HcetCJ12QUOsy
 
